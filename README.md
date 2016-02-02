@@ -38,7 +38,7 @@ api:
   - "4000:4000"
 
 pactverifier:
-  image: dius/pact-provider-verifier
+  image: dius/pact-provider-verifier-docker
   links:
   - api:api
   volumes:
@@ -89,7 +89,7 @@ The following environment variables required:
 		- "4000"
 
 	pactverifier:
-		image: dius/pact-provider-verifier
+		image: dius/pact-provider-verifier-docker
 		links:
 		- api
 		environment:
