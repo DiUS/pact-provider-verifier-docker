@@ -3,7 +3,7 @@ FROM ruby:2-alpine
 COPY Gemfile /app/
 COPY Gemfile.lock /app/
 RUN apk add --no-cache --virtual build-dependencies build-base && \
-    gem install bundler --no-ri --no-rdoc && \
+    gem install bundler && \
     cd /app; bundle install && \
     gem uninstall bundler && \
     apk del build-dependencies build-base && \
