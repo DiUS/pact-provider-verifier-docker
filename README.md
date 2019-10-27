@@ -34,7 +34,7 @@ This setup simplifies Pact Provider [verification](https://github.com/realestate
 api:
   build: .
   command: npm start
-  expose:
+  ports:
   - "4000:4000"
 
 pactverifier:
@@ -85,7 +85,7 @@ The following environment variables required:
 	api:
 		build: .
 		command: npm run-script pact-provider
-		expose:
+		ports:
 		- "4000"
 
 	pactverifier:
