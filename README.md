@@ -1,5 +1,7 @@
 # Pact Provider Verification
 
+**NOTE**: If you're new to Pact and have landed here, it's probably _not_ what you want. If you simply want a Dockerized version of the verifier, the official Docker container for all Pact libraries is: https://github.com/pact-foundation/pact-ruby-cli. 
+
 This setup simplifies Pact Provider [verification](https://github.com/realestate-com-au/pact#2-tell-your-provider-that-it-needs-to-honour-the-pact-file-you-made-earlier) process in any language, by running the Pact Rake tasks in a separate Docker container.
 
 **Features**:
