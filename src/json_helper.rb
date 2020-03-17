@@ -13,7 +13,10 @@ end
 
 def get_json_from_server(path)
     url = URI.parse(path)
-    conn = Faraday.new("#{url.scheme}://#{url.host}:#{url.port}") do |c|
+    conn = Faraday.new("#{url.scheme}://#{url.host}:#{url.port}", {
+        "Authorization" => "Bearer #{ENV['broker_token']}"
+      }
+    ) do |c|
         c.use FaradayMiddleware::ParseJson
         c.use Faraday::Adapter::NetHttp 
     end
