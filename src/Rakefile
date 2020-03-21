@@ -9,7 +9,7 @@ if missing_environment_variables.count > 0 then
 end
 
 # Non-mandatory, but probably useful environment variables
-other_environment_variables = ['provider_states_url', 'provider_states_active_url']
+other_environment_variables = ['provider_states_url', 'provider_states_active_url', 'broker_token']
 missing_environment_variables = other_environment_variables.select { |ev| ENV[ev].to_s == '' }
 if missing_environment_variables.count > 0 then
   warn("WARN: the following non-mandatory environment variables have not been specified: '#{missing_environment_variables}'")
